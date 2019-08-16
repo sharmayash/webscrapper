@@ -30,7 +30,8 @@ app.get("/", (req, res) => {
         obj.owner = url;
         arrOfObj.push(obj);
       });
-      res.render("index", { siteData: arrOfObj });
+      res.send(arrOfObj);
+      // res.render("index", { siteData: arrOfObj });
       arrOfObj = [];
     })
     .catch(function(err) {
